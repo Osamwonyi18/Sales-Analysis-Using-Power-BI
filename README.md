@@ -23,8 +23,3 @@ This Power BI dashboard provides a comprehensive analysis of sales performance, 
 - **Interactive Filters**: Users can filter data by continent, country, city, income group, and product category.
 - **Year Selection**: Ability to switch between different years to compare trends.
 - **Multiple Visualizations**: Includes line charts, bar charts, pie charts, and tables for an in-depth view of data.
-
-## 📝 How to Use
-1. Open the Power BI dashboard.
-2. Use the filters on the left to explore sales data by region, product, and time period.
-3. Analyze revenue trends, profit distribution, and year-over-year performance.
