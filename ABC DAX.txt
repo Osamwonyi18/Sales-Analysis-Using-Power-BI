@@ -1,0 +1,46 @@
+
+...Calculated measure...
+
+Revenue = SUM('Order'[Total Sales])
+
+Total_Cost = SUM('Order'[TotalCost])
+
+Profit = [Revenue] - [Total_Cost]
+
+% Variance = DIVIDE([Revenue]-[Previous Year Sales],[Previous Year Sales])*100
+
+Average Cost = AVERAGE('Order'[TotalCost])
+
+Average Revenue = AVERAGE('Order'[Total Sales])
+
+Cumulative_Revenue = CALCULATE(SUM('Order'[Total Sales]),
+              Filter(ALL('Calendar'),
+              'Calendar'[Dates] <= MAX('Calendar'[Dates])))
+
+CY_VS_PY = [Revenue] - [Previous Year Sales]
+
+Highest Revenue = MAX('Order'[Total Sales])
+
+Least Revenue = MIN('Order'[Total Sales])
+
+Previous Year Sales = CALCULATE(SUM('Order'[Total Sales]),
+                    SAMEPERIODLASTYEAR('Calendar'[Dates]))
+
+...Calculated Columns...
+
+Income Group = IF(Customers[AnnualIncome] <= 30000, "Low",
+                IF(Customers[AnnualIncome] <= 50000, "Medium",
+                IF(Customers[AnnualIncome] <= 80000, "High",
+                "Very High")))
+
+FullName = Employee[Title]&" "&Employee[FirstName]&" "&Employee[LastName]
+
+Total Sales = 'Order'[Quantity]*'Order'[Price]
+
+TotalCost = 'Order'[Cost]*'Order'[Quantity]
+
+
+
+
+
+
